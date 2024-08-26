@@ -3,6 +3,8 @@ package team.techtigers.base.statemachine;
 import com.arcrobotics.ftclib.command.CommandOpMode;
 import com.arcrobotics.ftclib.command.Subsystem;
 
+import team.techtigers.core.utils.GlobalState;
+
 
 /**
  * A CommandOpMode that allows for custom telemetry.
@@ -57,7 +59,6 @@ public abstract class BaseOpMode extends CommandOpMode {
             for (CloseableSubsytem subsystem : subsystems) {
                 subsystem.close();
             }
-//            AcrossOpModeSave.getInstance().setCurrentRobotPose(GlobalState.getRobotCurrentPose());
         }
     }
 }
