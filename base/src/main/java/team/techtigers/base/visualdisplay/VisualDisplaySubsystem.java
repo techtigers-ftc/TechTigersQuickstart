@@ -6,7 +6,7 @@ import java.util.HashMap;
 import team.techtigers.core.leddisplay.Color;
 import team.techtigers.core.leddisplay.DisplayRegion;
 import team.techtigers.core.leddisplay.DisplayView;
-import team.techtigers.statemachine.CloseableSubsytem;
+import team.techtigers.base.statemachine.CloseableSubsytem;
 
 /**
  * Output subsystem that controls the visual feedback display

@@ -7,9 +7,11 @@ import team.techtigers.base.statemachine.StateMachine;
 
 @TeleOp
 public class StateMachineTestOpMode extends BaseOpMode {
+    StateMachine stateMachine;
+
     @Override
     public void initialize() {
-        StateMachine stateMachine = new StateMachine();
+        stateMachine = new StateMachine();
 
         StateOne stateOne = new StateOne("stateOne");
         StateTwo stateTwo = new StateTwo("stateTwo");
@@ -22,6 +24,15 @@ public class StateMachineTestOpMode extends BaseOpMode {
                     .when(Condition.ENDED)
                 .setFirstState("stateOne");
 
+    }
+
+    @Override
+    protected void justAfterStart() {
         stateMachine.start();
+    }
+
+    @Override
+    protected void setTelemetry() {
+        stateMachine.update();
     }
 }

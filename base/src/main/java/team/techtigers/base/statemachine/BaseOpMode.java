@@ -20,6 +20,12 @@ public abstract class BaseOpMode extends CommandOpMode {
     }
 
     /**
+     * Method run after waitForStart() but before the opMode loop
+     */
+    protected void justAfterStart() {
+    }
+
+    /**
      * Child classes must invoke this method to ensure that the subsystems are properly registered
      * and cleaned up after the OpMode is finished.
      *
@@ -46,6 +52,7 @@ public abstract class BaseOpMode extends CommandOpMode {
                 subsystem.init();
             }
             waitForStart();
+            justAfterStart();
 
             // run the scheduler
             while (!isStopRequested() && opModeIsActive()) {
