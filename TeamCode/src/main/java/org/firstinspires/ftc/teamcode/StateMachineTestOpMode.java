@@ -5,6 +5,9 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import team.techtigers.base.statemachine.BaseOpMode;
 import team.techtigers.base.statemachine.StateMachine;
 
+/**
+ * Test op mode for the state machine
+ */
 @TeleOp
 public class StateMachineTestOpMode extends BaseOpMode {
     StateMachine stateMachine;

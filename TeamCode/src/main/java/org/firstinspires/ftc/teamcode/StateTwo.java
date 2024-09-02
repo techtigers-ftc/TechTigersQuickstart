@@ -2,7 +2,14 @@ package org.firstinspires.ftc.teamcode;
 
 import team.techtigers.base.statemachine.State;
 
+/**
+ * Test state for the state machine
+ */
 public class StateTwo extends State<Condition> {
+    /**
+     * Constructs a new state
+     * @param name The name of the state
+     */
     public StateTwo(String name) {
         super(name);
     }
@@ -19,6 +26,6 @@ public class StateTwo extends State<Condition> {
 
     @Override
     public void execute() {
-//        System.out.println("Running State Two");
+        System.out.println("Running State Two");
     }
 }
