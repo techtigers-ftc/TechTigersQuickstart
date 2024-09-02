@@ -6,7 +6,7 @@ import com.arcrobotics.ftclib.command.Subsystem;
 import team.techtigers.base.actions.IAction;
 
 /**
- * Command to handle the running of a set of actions
+ * Command to handle the running of an action
  */
 public class ActionRunnerCommand extends CommandBase {
     private IAction topLevelAction;

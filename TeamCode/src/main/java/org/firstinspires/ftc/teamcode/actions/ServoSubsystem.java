@@ -36,14 +36,16 @@ public class ServoSubsystem extends CloseableSubsytem {
     public IAction getServoAction() {
         return new ParallelAction(
                 new SerialAction(
-                        new WaitAction(1000), // Waits 1 second
-                        new ServoAction(servo1, 1, 2000) // Moves servo1 to
-                        // position 1 in 1 second
+                        // Waits 1 second
+                        new WaitAction(1000),
+                        // Moves servo1 to position 1 in 1 second
+                        new ServoAction(servo1, 1, 2000)
                 ),
                 new SerialAction(
-                        new WaitUntilAction(() -> servo1.getPosition() > 0.5), // Waits until servo1 is past position 0.5
-                        new ServoAction(servo2, 1, 500) // Moves servo2 to
-                        // position 1 in 1 second
+                        // Waits until servo1 is past position 0.5
+                        new WaitUntilAction(() -> servo1.getPosition() > 0.5),
+                        // Moves servo2 to position 1 in 1 second
+                        new ServoAction(servo2, 1, 500)
                 )
         );
     }
