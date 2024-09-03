@@ -26,6 +26,12 @@ public abstract class BaseOpMode extends CommandOpMode {
     }
 
     /**
+     * Method run at the end, after the opMode loop
+     */
+    protected void end() {
+    }
+
+    /**
      * Child classes must invoke this method to ensure that the subsystems are properly registered
      * and cleaned up after the OpMode is finished.
      *
@@ -66,6 +72,7 @@ public abstract class BaseOpMode extends CommandOpMode {
             for (CloseableSubsytem subsystem : subsystems) {
                 subsystem.close();
             }
+            end();
         }
     }
 }
