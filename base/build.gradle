@@ -20,10 +20,7 @@ android {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url = 'https://maven.brott.dev/'
-        }
-    }
+
 }
 
 dependencies {
@@ -40,5 +37,4 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:5.12.0'
     implementation 'org.ftclib.ftclib:core:2.0.1'
     implementation 'org.firstinspires.ftc:RobotCore:9.2.0'
-    implementation 'com.acmerobotics.roadrunner:core:0.5.5'
 }
