@@ -12,7 +12,7 @@ public class SerialAction implements IAction {
      * Initializes all of the values
      * @param actions array of actions
      */
-    public SerialAction(IAction[] actions) {
+    public SerialAction(IAction... actions) {
         if (actions == null){
             throw new IllegalArgumentException("Invalid actions (arg #1)");
         }

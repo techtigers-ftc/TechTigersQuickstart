@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.statemachine;
 
 /**
  * Enum for the condition of the state
