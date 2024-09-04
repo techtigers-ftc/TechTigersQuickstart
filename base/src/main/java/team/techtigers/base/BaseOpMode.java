@@ -3,7 +3,7 @@ package team.techtigers.base;
 import com.arcrobotics.ftclib.command.CommandOpMode;
 import com.arcrobotics.ftclib.command.Subsystem;
 
-import team.techtigers.statemachine.CloseableSubsytem;
+import team.techtigers.base.statemachine.CloseableSubsytem;
 
 
 /**
