@@ -62,6 +62,9 @@ public class Pathfinder {
         Point secondToFirst = firstVector.minus(secondVector);
         Point secondToThird = thirdVector.minus(secondVector);
 
+        System.out.println("First Vector: " + firstVector + " Second Vector: " + secondVector + " Third vector: " + thirdVector);
+        System.out.println("Second to first: " + secondToFirst + " Second to Third: " + secondToThird + "Angle to: " + secondToFirst.angleTo(secondToThird));
+
         return secondToFirst.angleTo(secondToThird);
     }
 
@@ -86,6 +89,7 @@ public class Pathfinder {
                 double angle = getAngleBetween3Points(queue.get(0), queue.get(1), queue.get(2));
                 double angleDelta = Math.abs(Math.toRadians(180) - angle);
                 boolean removeNode = angleDelta < 0.001;
+                System.out.println("Angle Delta: " + angleDelta);
                 if (removeNode) {
                     queue.remove(1);
                 } else {

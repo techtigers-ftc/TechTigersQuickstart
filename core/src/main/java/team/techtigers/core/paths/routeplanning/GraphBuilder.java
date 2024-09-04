@@ -16,7 +16,8 @@ public class GraphBuilder {
      * @param fieldMap A square 2D array with only 1s and 0s, with each value representing whether or not the
      *                 robot is allowed to travel to that coordinate. Use this field to block out known obstacles.
      * @param divisionsPerTile Used to scale the coordinates of the final graph. The number of
-     *                         divisions per each field tile used.
+     *                         divisions per each field tile used, in 1
+     *                         direction
      * @return A graph representing the field given
      */
     public static FieldGraph buildGraph(int[][] fieldMap, double divisionsPerTile) {
