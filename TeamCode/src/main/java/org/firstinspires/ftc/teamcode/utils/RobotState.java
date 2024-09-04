@@ -31,7 +31,7 @@ public class RobotState extends GlobalState {
         return isRunning;
     }
 
-    /**\
+    /**
      * Sets the height of the intake
      * @param intakeHeight The height of the intake
      */
