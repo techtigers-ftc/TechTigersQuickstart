@@ -1,4 +1,7 @@
-package team.techtigers.core.leddisplay;
+package org.firstinspires.ftc.teamcode.display;
+
+import team.techtigers.core.leddisplay.Color;
+import team.techtigers.core.leddisplay.Sprite;
 
 /**
  * A class which represents a sprite shaped like the number 1
