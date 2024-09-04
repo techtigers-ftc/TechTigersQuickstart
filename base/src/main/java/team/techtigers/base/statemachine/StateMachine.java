@@ -46,8 +46,7 @@ public class StateMachine {
 
     /**
      * Adds a condition to the state machine. This should really only  be
-     * used in the
-     * TransitionBuilder, other users should use the from method.
+     * used in the TransitionBuilder, other users should use the from method.
      *
      * @param currentState the name of the condition
      * @return the state machine to allow for method chaining
