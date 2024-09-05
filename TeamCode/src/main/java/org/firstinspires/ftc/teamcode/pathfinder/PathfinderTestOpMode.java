@@ -29,7 +29,10 @@ public class PathfinderTestOpMode extends BaseOpMode {
 
         ArrayList<Waypoint> waypoints;
         try {
-            waypoints = Pathfinder.getInstance().generatePath(start, end, false);
+            // NOTE: This will find a path while pruning any unnecessary nodes.
+            //       To see a path with all nodes, add a false argument to the
+            //       method call
+            waypoints = Pathfinder.getInstance().generatePath(start, end);
             for (Waypoint waypoint : waypoints) {
                 telemetry.addLine(waypoint.toString());
             }
