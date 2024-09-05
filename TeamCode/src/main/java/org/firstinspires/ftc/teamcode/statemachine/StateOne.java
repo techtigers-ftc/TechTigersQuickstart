@@ -30,9 +30,4 @@ public class StateOne extends State<Condition> {
         System.out.println("Start state 1");
         timer.reset();
     }
-
-    @Override
-    public void execute() {
-        System.out.println("Running State One");
-    }
 }

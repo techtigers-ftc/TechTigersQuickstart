@@ -24,9 +24,4 @@ public class StateTwo extends State<Condition> {
     public void initialize() {
         System.out.println("Start state 2");
     }
-
-    @Override
-    public void execute() {
-        System.out.println("Running State Two");
-    }
 }
