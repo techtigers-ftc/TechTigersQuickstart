@@ -24,12 +24,12 @@ public class PathfinderTestOpMode extends BaseOpMode {
         Pathfinder.initialize(Graph.MAP, Graph.MAP.length / 6.0);
 
         // Attempt to generate a path from the bottom left to the top left
-        Waypoint start = new Waypoint(0, 0);
-        Waypoint end = new Waypoint(60, 60);
+        Waypoint start = new Waypoint(-72, -72);
+        Waypoint end = new Waypoint(-72, 72);
 
         ArrayList<Waypoint> waypoints;
         try {
-            waypoints = Pathfinder.getInstance().generatePath(start, end);
+            waypoints = Pathfinder.getInstance().generatePath(start, end, false);
             for (Waypoint waypoint : waypoints) {
                 telemetry.addLine(waypoint.toString());
             }
