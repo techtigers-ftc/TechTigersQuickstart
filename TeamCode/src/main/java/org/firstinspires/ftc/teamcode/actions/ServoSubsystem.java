@@ -19,6 +19,7 @@ public class ServoSubsystem extends CloseableSubsytem {
 
     /**
      * Initializes a new ServoSubsystem
+     *
      * @param servo1 The first servo
      * @param servo2 The second servo
      */

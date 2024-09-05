@@ -2,8 +2,6 @@ package org.firstinspires.ftc.teamcode.pathfinder;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.utils.RobotState;
-
 import java.util.ArrayList;
 
 import team.techtigers.base.BaseOpMode;
@@ -23,7 +21,7 @@ public class PathfinderTestOpMode extends BaseOpMode {
         // Initialize Pathfinder. The second parameter is the divisions per
         // tile, which is the length of the graph divided by the number of
         // tiles on the field.
-        Pathfinder.initialize(Graph.MAP, Graph.MAP.length/6.0);
+        Pathfinder.initialize(Graph.MAP, Graph.MAP.length / 6.0);
 
         // Attempt to generate a path from the bottom left to the top left
         Waypoint start = new Waypoint(0, 0);
@@ -31,7 +29,7 @@ public class PathfinderTestOpMode extends BaseOpMode {
 
         ArrayList<Waypoint> waypoints;
         try {
-            waypoints =  Pathfinder.getInstance().generatePath(start, end);
+            waypoints = Pathfinder.getInstance().generatePath(start, end);
             for (Waypoint waypoint : waypoints) {
                 telemetry.addLine(waypoint.toString());
             }

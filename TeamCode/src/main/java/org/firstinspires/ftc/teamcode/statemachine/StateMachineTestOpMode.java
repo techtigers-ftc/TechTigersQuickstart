@@ -23,8 +23,8 @@ public class StateMachineTestOpMode extends BaseOpMode {
                 .addState(stateOne)
                 .addState(stateTwo)
                 .from("stateOne")
-                    .to("stateTwo")
-                    .when(Condition.ENDED)
+                .to("stateTwo")
+                .when(Condition.ENDED)
                 .setFirstState("stateOne");
 
     }

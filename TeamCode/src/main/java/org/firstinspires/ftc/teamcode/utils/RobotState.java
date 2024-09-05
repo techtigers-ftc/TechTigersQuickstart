@@ -25,14 +25,8 @@ public class RobotState extends GlobalState {
     }
 
     /**
-     * @return Whether the robot is running
-     */
-    public boolean isRunning() {
-        return isRunning;
-    }
-
-    /**
      * Sets the height of the intake
+     *
      * @param intakeHeight The height of the intake
      */
     public void setIntakeHeight(double intakeHeight) {
@@ -40,7 +34,15 @@ public class RobotState extends GlobalState {
     }
 
     /**
+     * @return Whether the robot is running
+     */
+    public boolean isRunning() {
+        return isRunning;
+    }
+
+    /**
      * Sets whether the robot is running
+     *
      * @param isRunning Whether the robot is running
      */
     public void setIsRunning(boolean isRunning) {

@@ -17,8 +17,8 @@ public class ExampleRegion extends DisplayRegion {
     /**
      * Creates a new example region
      *
-     * @param x     the x coordinate of the bottom left corner of the region
-     * @param y     the y coordinate of the bottom left corner of the region
+     * @param x the x coordinate of the bottom left corner of the region
+     * @param y the y coordinate of the bottom left corner of the region
      */
     public ExampleRegion(int x, int y) {
         super(x, y, 4, 7); // Specifies the region parameters
@@ -39,7 +39,7 @@ public class ExampleRegion extends DisplayRegion {
     @Override
     public void update() {
         // Moves the sprites up and down every second
-        if (System.currentTimeMillis()-lastTime > 1000) {
+        if (System.currentTimeMillis() - lastTime > 1000) {
             if (oneInTensDigit.getY() == 1 || oneInOnesDigit.getY() == 1) {
                 oneInOnesDigit.setPosition(oneInOnesDigit.getX(), oneInOnesDigit.getY() - 1);
                 oneInTensDigit.setPosition(oneInTensDigit.getX(), oneInTensDigit.getY() - 1);

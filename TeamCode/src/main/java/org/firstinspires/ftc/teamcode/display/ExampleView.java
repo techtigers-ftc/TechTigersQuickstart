@@ -13,7 +13,7 @@ public class ExampleView extends DisplayView {
      */
     public ExampleView() {
         super(new DisplayRegion[]{
-                new ExampleRegion(0,0)
+                new ExampleRegion(0, 0)
         });
     }
 }

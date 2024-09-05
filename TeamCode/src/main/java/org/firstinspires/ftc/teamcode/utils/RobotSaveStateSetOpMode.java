@@ -8,7 +8,7 @@ import team.techtigers.core.utils.RobotSaveState;
 /**
  * Test op mode for the robot save state. This sets a value in the state
  */
-@TeleOp(name="Robot Save State SET")
+@TeleOp(name = "Robot Save State SET")
 public class RobotSaveStateSetOpMode extends BaseOpMode {
     private double randomId;
 

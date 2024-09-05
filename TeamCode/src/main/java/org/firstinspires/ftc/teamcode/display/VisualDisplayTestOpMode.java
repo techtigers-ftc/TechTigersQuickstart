@@ -2,8 +2,6 @@ package org.firstinspires.ftc.teamcode.display;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.utils.RobotState;
-
 import team.techtigers.base.BaseOpMode;
 import team.techtigers.base.visualdisplay.AdafruitNeoPixel;
 import team.techtigers.base.visualdisplay.VisualDisplaySubsystem;

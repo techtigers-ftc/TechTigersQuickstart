@@ -12,6 +12,7 @@ public class StateOne extends State<Condition> {
 
     /**
      * Constructs a new state
+     *
      * @param name The name of the state
      */
     public StateOne(String name) {
@@ -21,7 +22,7 @@ public class StateOne extends State<Condition> {
 
     @Override
     public Condition getCurrentCondition() {
-        return timer.seconds()>2? Condition.ENDED: Condition.RUNNING;
+        return timer.seconds() > 2 ? Condition.ENDED : Condition.RUNNING;
     }
 
     @Override

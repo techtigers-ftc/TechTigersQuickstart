@@ -8,6 +8,7 @@ import team.techtigers.base.statemachine.State;
 public class StateTwo extends State<Condition> {
     /**
      * Constructs a new state
+     *
      * @param name The name of the state
      */
     public StateTwo(String name) {

@@ -11,11 +11,11 @@ public class ExampleSprite extends Sprite {
     /**
      * Creates a new example sprite
      *
-     * @param x     the x coordinate of the bottom left corner of the sprite within the region
-     * @param y     the y coordinate of the bottom left corner of the sprite within the region
+     * @param x the x coordinate of the bottom left corner of the sprite within the region
+     * @param y the y coordinate of the bottom left corner of the sprite within the region
      */
     public ExampleSprite(int x, int y) {
-        super(x, y, 2,5);
+        super(x, y, 2, 5);
     }
 
 

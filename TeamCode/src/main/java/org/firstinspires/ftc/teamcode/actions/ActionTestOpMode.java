@@ -1,15 +1,9 @@
 package org.firstinspires.ftc.teamcode.actions;
 
-import com.arcrobotics.ftclib.command.CommandScheduler;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.statemachine.Condition;
-import org.firstinspires.ftc.teamcode.statemachine.StateOne;
-import org.firstinspires.ftc.teamcode.statemachine.StateTwo;
-
-import team.techtigers.base.actions.ActionRunnerCommand;
 import team.techtigers.base.BaseOpMode;
-import team.techtigers.base.statemachine.StateMachine;
+import team.techtigers.base.actions.ActionRunnerCommand;
 
 /**
  * Test op mode for the actions

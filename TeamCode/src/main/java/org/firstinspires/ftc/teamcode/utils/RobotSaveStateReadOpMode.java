@@ -8,7 +8,7 @@ import team.techtigers.core.utils.RobotSaveState;
 /**
  * Test op mode for the robot save state. This reads a value in the state
  */
-@TeleOp(name="Robot Save State READ")
+@TeleOp(name = "Robot Save State READ")
 public class RobotSaveStateReadOpMode extends BaseOpMode {
     @Override
     public void initialize() {
