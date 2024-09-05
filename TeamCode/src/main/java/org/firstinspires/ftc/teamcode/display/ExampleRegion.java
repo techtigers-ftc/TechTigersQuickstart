@@ -1,9 +1,9 @@
 package org.firstinspires.ftc.teamcode.display;
 
 
-import team.techtigers.core.leddisplay.Color;
-import team.techtigers.core.leddisplay.DisplayRegion;
-import team.techtigers.core.leddisplay.Sprite;
+import team.techtigers.core.display.Color;
+import team.techtigers.core.display.DisplayRegion;
+import team.techtigers.core.display.Sprite;
 
 /**
  * A class that represents a region in which the number 11 is displayed and moves up and down

@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.utils;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import team.techtigers.base.statemachine.BaseOpMode;
+import team.techtigers.base.BaseOpMode;
 import team.techtigers.core.utils.RobotSaveState;
 
 /**

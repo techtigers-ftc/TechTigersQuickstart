@@ -6,7 +6,7 @@ import org.firstinspires.ftc.teamcode.utils.RobotState;
 
 import java.util.ArrayList;
 
-import team.techtigers.base.statemachine.BaseOpMode;
+import team.techtigers.base.BaseOpMode;
 import team.techtigers.core.paths.ClosestNodeIsTooFarException;
 import team.techtigers.core.paths.NodeCannotBeFoundException;
 import team.techtigers.core.paths.PathCannotBeFoundException;
@@ -27,7 +27,7 @@ public class PathfinderTestOpMode extends BaseOpMode {
 
         // Attempt to generate a path from the bottom left to the top left
         Waypoint start = new Waypoint(0, 0);
-        Waypoint end = new Waypoint(0, 144);
+        Waypoint end = new Waypoint(60, 60);
 
         ArrayList<Waypoint> waypoints;
         try {

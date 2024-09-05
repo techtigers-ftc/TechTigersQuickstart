@@ -1,7 +1,7 @@
 package org.firstinspires.ftc.teamcode.display;
 
-import team.techtigers.core.leddisplay.DisplayRegion;
-import team.techtigers.core.leddisplay.DisplayView;
+import team.techtigers.core.display.DisplayRegion;
+import team.techtigers.core.display.DisplayView;
 
 /**
  * An example view period
