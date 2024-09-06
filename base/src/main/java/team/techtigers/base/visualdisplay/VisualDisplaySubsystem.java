@@ -3,10 +3,10 @@ package team.techtigers.base.visualdisplay;
 
 import java.util.HashMap;
 
+import team.techtigers.base.CloseableSubsytem;
 import team.techtigers.core.display.Color;
 import team.techtigers.core.display.DisplayRegion;
 import team.techtigers.core.display.DisplayView;
-import team.techtigers.base.statemachine.CloseableSubsytem;
 
 /**
  * Output subsystem that controls the visual feedback display
@@ -20,7 +20,7 @@ public class VisualDisplaySubsystem extends CloseableSubsytem {
      * Initializes a new visual feedback subsystem object. Obtains references to visual feedback
      *
      * @param visualDisplay the visual display object (adafruit neopixel)
-     * @param defaultView the default view to display
+     * @param defaultView   the default view to display
      */
     public VisualDisplaySubsystem(AdafruitNeoPixel visualDisplay, DisplayView defaultView) {
         this.visualDisplay = visualDisplay;
@@ -50,6 +50,7 @@ public class VisualDisplaySubsystem extends CloseableSubsytem {
 
     /**
      * Finds the index of the LED in the array
+     *
      * @param ledX the x coordinate of the LED
      * @param ledY the y coordinate of the LED
      * @return the index of the LED in the array

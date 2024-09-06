@@ -7,13 +7,13 @@ import com.arcrobotics.ftclib.command.Subsystem;
  * Command to handle the running of an action
  */
 public class ActionRunnerCommand extends CommandBase {
-    private IAction topLevelAction;
+    private final IAction topLevelAction;
 
     /**
      * Initializes a new ActionRunnerCommand
      *
      * @param topLevelAction The top level action to run
-     * @param subsystems The subsystems that are required
+     * @param subsystems     The subsystems that are required
      */
     public ActionRunnerCommand(IAction topLevelAction,
                                Subsystem... subsystems) {

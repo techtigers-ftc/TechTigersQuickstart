@@ -1,10 +1,10 @@
-package team.techtigers.base.statemachine;
+package team.techtigers.base;
 
 import com.arcrobotics.ftclib.command.SubsystemBase;
 
 /**
- * Extension of SubsystemBase that adds a close() method. This method is called when the robot is
- * disabled.
+ * Extension of SubsystemBase that adds an init() and close() method. This
+ * method is called when the robot is disabled.
  */
 public class CloseableSubsytem extends SubsystemBase {
     /**

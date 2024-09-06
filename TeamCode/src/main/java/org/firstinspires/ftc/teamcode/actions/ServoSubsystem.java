@@ -8,7 +8,7 @@ import team.techtigers.base.actions.SerialAction;
 import team.techtigers.base.actions.ServoAction;
 import team.techtigers.base.actions.WaitAction;
 import team.techtigers.base.actions.WaitUntilAction;
-import team.techtigers.base.statemachine.CloseableSubsytem;
+import team.techtigers.base.CloseableSubsytem;
 
 /**
  * Subsystem for controlling two servos

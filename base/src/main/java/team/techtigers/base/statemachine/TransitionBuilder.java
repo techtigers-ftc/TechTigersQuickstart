@@ -2,6 +2,7 @@ package team.techtigers.base.statemachine;
 
 /**
  * Builder class for creating transitions in a state machine
+ *
  * @param <T> The type of the condition, usually an enum
  **/
 public class TransitionBuilder<T> {

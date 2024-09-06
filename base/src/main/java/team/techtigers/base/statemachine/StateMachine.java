@@ -45,7 +45,7 @@ public class StateMachine {
     }
 
     /**
-     * Adds a condition to the state machine. This should really only  be
+     * Adds a condition to the state machine. This should only be
      * used in the TransitionBuilder, other users should use the from method.
      *
      * @param currentState the name of the condition
@@ -73,6 +73,9 @@ public class StateMachine {
         return this;
     }
 
+    /**
+     * Starts the state machine
+     */
     public void start() {
         if (currentState == null) {
             throw new IllegalStateException("No first state set");
