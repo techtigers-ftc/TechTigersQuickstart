@@ -1,9 +1,7 @@
-package org.firstinspires.ftc.teamcode.actions;
+package team.techtigers.base.actions;
 
 import com.arcrobotics.ftclib.command.CommandBase;
 import com.arcrobotics.ftclib.command.Subsystem;
-
-import team.techtigers.base.actions.IAction;
 
 /**
  * Command to handle the running of an action

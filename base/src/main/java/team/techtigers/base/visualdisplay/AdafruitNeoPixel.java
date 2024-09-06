@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice;
 import com.qualcomm.robotcore.hardware.configuration.annotations.DeviceProperties;
 import com.qualcomm.robotcore.hardware.configuration.annotations.I2cDeviceType;
 
-import team.techtigers.core.leddisplay.Color;
+import team.techtigers.core.display.Color;
 
 /**
  * Driver for the Adafruit NeoPixel driver. This driver can be used to control individually

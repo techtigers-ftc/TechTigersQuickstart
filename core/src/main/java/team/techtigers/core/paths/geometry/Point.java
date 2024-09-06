@@ -44,7 +44,7 @@ public class Point {
      * @return The angle the point makes with the origin
      */
     public double polarAngle() {
-        return Math.atan(this.y/ this.x);
+        return Math.atan(this.y / this.x);
     }
 
     /**

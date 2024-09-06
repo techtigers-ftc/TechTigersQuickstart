@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode.statemachine;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import team.techtigers.base.statemachine.BaseOpMode;
+import team.techtigers.base.BaseOpMode;
 import team.techtigers.base.statemachine.StateMachine;
 
 /**
@@ -23,8 +23,8 @@ public class StateMachineTestOpMode extends BaseOpMode {
                 .addState(stateOne)
                 .addState(stateTwo)
                 .from("stateOne")
-                    .to("stateTwo")
-                    .when(Condition.ENDED)
+                .to("stateTwo")
+                .when(Condition.ENDED)
                 .setFirstState("stateOne");
 
     }
@@ -35,7 +35,7 @@ public class StateMachineTestOpMode extends BaseOpMode {
     }
 
     @Override
-    protected void setTelemetry() {
+    protected void update() {
         stateMachine.update();
     }
 }

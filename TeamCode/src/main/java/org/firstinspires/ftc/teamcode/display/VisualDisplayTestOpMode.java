@@ -2,12 +2,10 @@ package org.firstinspires.ftc.teamcode.display;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.utils.RobotState;
-
-import team.techtigers.base.statemachine.BaseOpMode;
+import team.techtigers.base.BaseOpMode;
 import team.techtigers.base.visualdisplay.AdafruitNeoPixel;
 import team.techtigers.base.visualdisplay.VisualDisplaySubsystem;
-import team.techtigers.core.leddisplay.DisplayView;
+import team.techtigers.core.display.DisplayView;
 
 /**
  * Test op mode for the visual display (LEDs)

@@ -8,6 +8,7 @@ import team.techtigers.base.statemachine.State;
 public class StateTwo extends State<Condition> {
     /**
      * Constructs a new state
+     *
      * @param name The name of the state
      */
     public StateTwo(String name) {
@@ -22,10 +23,5 @@ public class StateTwo extends State<Condition> {
     @Override
     public void initialize() {
         System.out.println("Start state 2");
-    }
-
-    @Override
-    public void execute() {
-        System.out.println("Running State Two");
     }
 }

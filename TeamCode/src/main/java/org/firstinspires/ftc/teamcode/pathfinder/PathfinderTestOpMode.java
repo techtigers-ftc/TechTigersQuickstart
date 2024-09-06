@@ -2,11 +2,9 @@ package org.firstinspires.ftc.teamcode.pathfinder;
 
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.utils.RobotState;
-
 import java.util.ArrayList;
 
-import team.techtigers.base.statemachine.BaseOpMode;
+import team.techtigers.base.BaseOpMode;
 import team.techtigers.core.paths.ClosestNodeIsTooFarException;
 import team.techtigers.core.paths.NodeCannotBeFoundException;
 import team.techtigers.core.paths.PathCannotBeFoundException;
@@ -23,15 +21,18 @@ public class PathfinderTestOpMode extends BaseOpMode {
         // Initialize Pathfinder. The second parameter is the divisions per
         // tile, which is the length of the graph divided by the number of
         // tiles on the field.
-        Pathfinder.initialize(Graph.MAP, Graph.MAP.length/6.0);
+        Pathfinder.initialize(Graph.MAP, Graph.MAP.length / 6.0);
 
         // Attempt to generate a path from the bottom left to the top left
-        Waypoint start = new Waypoint(0, 0);
-        Waypoint end = new Waypoint(0, 144);
+        Waypoint start = new Waypoint(-72, -72);
+        Waypoint end = new Waypoint(-72, 72);
 
         ArrayList<Waypoint> waypoints;
         try {
-            waypoints =  Pathfinder.getInstance().generatePath(start, end);
+            // NOTE: This will find a path while pruning any unnecessary nodes.
+            //       To see a path with all nodes, add a false argument to the
+            //       method call
+            waypoints = Pathfinder.getInstance().generatePath(start, end);
             for (Waypoint waypoint : waypoints) {
                 telemetry.addLine(waypoint.toString());
             }

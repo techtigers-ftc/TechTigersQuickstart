@@ -1,7 +1,7 @@
 package org.firstinspires.ftc.teamcode.display;
 
-import team.techtigers.core.leddisplay.Color;
-import team.techtigers.core.leddisplay.Sprite;
+import team.techtigers.core.display.Color;
+import team.techtigers.core.display.Sprite;
 
 /**
  * A class which represents a sprite shaped like the number 1
@@ -11,11 +11,11 @@ public class ExampleSprite extends Sprite {
     /**
      * Creates a new example sprite
      *
-     * @param x     the x coordinate of the bottom left corner of the sprite within the region
-     * @param y     the y coordinate of the bottom left corner of the sprite within the region
+     * @param x the x coordinate of the bottom left corner of the sprite within the region
+     * @param y the y coordinate of the bottom left corner of the sprite within the region
      */
     public ExampleSprite(int x, int y) {
-        super(x, y, 2,5);
+        super(x, y, 2, 5);
     }
 
 

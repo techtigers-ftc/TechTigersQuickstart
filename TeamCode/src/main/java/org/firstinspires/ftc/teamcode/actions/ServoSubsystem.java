@@ -19,6 +19,7 @@ public class ServoSubsystem extends CloseableSubsytem {
 
     /**
      * Initializes a new ServoSubsystem
+     *
      * @param servo1 The first servo
      * @param servo2 The second servo
      */
@@ -39,13 +40,13 @@ public class ServoSubsystem extends CloseableSubsytem {
                         // Waits 1 second
                         new WaitAction(1000),
                         // Moves servo1 to position 1 in 1 second
-                        new ServoAction(servo1, 1, 2000)
+                        new ServoAction(servo1, 1, 5000)
                 ),
                 new SerialAction(
                         // Waits until servo1 is past position 0.5
                         new WaitUntilAction(() -> servo1.getPosition() > 0.5),
                         // Moves servo2 to position 1 in 1 second
-                        new ServoAction(servo2, 1, 500)
+                        new ServoAction(servo2, 1, 1000)
                 )
         );
     }

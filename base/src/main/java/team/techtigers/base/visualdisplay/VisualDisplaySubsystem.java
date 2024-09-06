@@ -3,9 +3,9 @@ package team.techtigers.base.visualdisplay;
 
 import java.util.HashMap;
 
-import team.techtigers.core.leddisplay.Color;
-import team.techtigers.core.leddisplay.DisplayRegion;
-import team.techtigers.core.leddisplay.DisplayView;
+import team.techtigers.core.display.Color;
+import team.techtigers.core.display.DisplayRegion;
+import team.techtigers.core.display.DisplayView;
 import team.techtigers.base.statemachine.CloseableSubsytem;
 
 /**

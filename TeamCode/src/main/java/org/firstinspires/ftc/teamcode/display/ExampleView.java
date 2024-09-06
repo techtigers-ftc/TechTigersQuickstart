@@ -1,7 +1,7 @@
 package org.firstinspires.ftc.teamcode.display;
 
-import team.techtigers.core.leddisplay.DisplayRegion;
-import team.techtigers.core.leddisplay.DisplayView;
+import team.techtigers.core.display.DisplayRegion;
+import team.techtigers.core.display.DisplayView;
 
 /**
  * An example view period
@@ -13,7 +13,7 @@ public class ExampleView extends DisplayView {
      */
     public ExampleView() {
         super(new DisplayRegion[]{
-                new ExampleRegion(0,0)
+                new ExampleRegion(0, 0)
         });
     }
 }
