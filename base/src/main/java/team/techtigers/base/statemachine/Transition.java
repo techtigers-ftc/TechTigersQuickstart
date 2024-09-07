@@ -2,6 +2,7 @@ package team.techtigers.base.statemachine;
 
 /**
  * Represents a condition that must be met for a state to transition to the next state
+ *
  * @param <T> The type of the condition, usually an enum
  */
 public class Transition<T> {
@@ -12,7 +13,7 @@ public class Transition<T> {
      * Initializes a new Transition
      *
      * @param endCondition the condition where a state should transition
-     * @param nextState the name of the next state
+     * @param nextState    the name of the next state
      */
     public Transition(T endCondition, String nextState) {
         this.endCondition = endCondition;

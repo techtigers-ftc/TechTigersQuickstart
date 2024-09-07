@@ -3,8 +3,6 @@ package team.techtigers.base.actions;
 /**
  * Interface for an action.
  * Will be able to create a step for a manipulator to use with either a servo or a motor
- *
- * <p> <b>Episode III</b>: The revenge of the Servo Actions </p>
  */
 public interface IAction {
     /**
@@ -14,6 +12,7 @@ public interface IAction {
 
     /**
      * Returns whether the motor or servo is done with the action
+     *
      * @return if the servo has finished going to its position
      */
     boolean isFinished();

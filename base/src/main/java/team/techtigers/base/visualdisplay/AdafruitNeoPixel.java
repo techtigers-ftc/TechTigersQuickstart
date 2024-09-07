@@ -37,7 +37,8 @@ public class AdafruitNeoPixel extends I2cDeviceSynchDevice<I2cDeviceSynch> {
 
     /**
      * Creates a new Adafruit NeoPixel driver.
-     * @param i2cDeviceSynch this item is traditioanally created through the hardwareMap
+     *
+     * @param i2cDeviceSynch      this item is traditioanally created through the hardwareMap
      * @param deviceClientIsOwned this item is traditioanally created through the hardwareMap
      */
     public AdafruitNeoPixel(I2cDeviceSynch i2cDeviceSynch, boolean deviceClientIsOwned) {
@@ -81,7 +82,7 @@ public class AdafruitNeoPixel extends I2cDeviceSynchDevice<I2cDeviceSynch> {
     }
 
     private void writeDeviceBuffer(byte[] payload) {
-        if (payload.length > MAX_SEQUENCE_LENGTH+2) {
+        if (payload.length > MAX_SEQUENCE_LENGTH + 2) {
             throw new IllegalArgumentException("Payload cannot be longer than " + (MAX_SEQUENCE_LENGTH + 2) + " bytes");
         }
         byte[] buffer = new byte[payload.length + 2];
@@ -98,7 +99,7 @@ public class AdafruitNeoPixel extends I2cDeviceSynchDevice<I2cDeviceSynch> {
     }
 
     private byte[] createPayload(int startIndex, int length) {
-        byte[] payload = new byte[length*bytesPerLed+2];
+        byte[] payload = new byte[length * bytesPerLed + 2];
         int startAddress = startIndex * bytesPerLed;
 
         payload[0] = (byte) (startAddress >> 8);
@@ -109,10 +110,10 @@ public class AdafruitNeoPixel extends I2cDeviceSynchDevice<I2cDeviceSynch> {
             int payloadIndex = (index * bytesPerLed) + 2;
 
             payload[payloadIndex] = ledColor.green;
-            payload[payloadIndex+1] = ledColor.red;
-            payload[payloadIndex+2] = ledColor.blue;
+            payload[payloadIndex + 1] = ledColor.red;
+            payload[payloadIndex + 2] = ledColor.blue;
             if (bytesPerLed == 4) {
-                payload[payloadIndex+3] = ledColor.white;
+                payload[payloadIndex + 3] = ledColor.white;
             }
         }
 
@@ -244,7 +245,7 @@ public class AdafruitNeoPixel extends I2cDeviceSynchDevice<I2cDeviceSynch> {
             // 1. Buffer has not changed and tracking a sequence
             boolean endOfSequence = !hasChanged && startIndex > -1;
             // 2. Length of sequence is > max sequence length
-            boolean maxLengthReached = length >= MAX_SEQUENCE_LENGTH/bytesPerLed;
+            boolean maxLengthReached = length >= MAX_SEQUENCE_LENGTH / bytesPerLed;
             // 3. End of the buffer and tracking a sequence
             boolean trackingEndOfBuffer = startIndex > -1 && index == lastLedBuffer.length - 1;
 

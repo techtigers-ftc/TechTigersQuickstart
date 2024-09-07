@@ -1,7 +1,7 @@
 package team.techtigers.base.actions;
 
 /**
- * Allows multiple servo actions to be performed in series
+ * Allows multiple actions to be performed in series
  */
 public class SerialAction implements IAction {
     private final IAction[] actions;
@@ -10,16 +10,17 @@ public class SerialAction implements IAction {
 
     /**
      * Initializes all of the values
+     *
      * @param actions array of actions
      */
     public SerialAction(IAction... actions) {
-        if (actions == null){
-            throw new IllegalArgumentException("Invalid actions (arg #1)");
+        if (actions == null) {
+            throw new IllegalArgumentException("No non-null actions inputted");
         }
 
-        for (IAction action:actions) {
-            if (action == null){
-                throw new IllegalArgumentException("Invalid");
+        for (IAction action : actions) {
+            if (action == null) {
+                throw new IllegalArgumentException("Action is null");
             }
         }
         this.actions = actions;
@@ -28,17 +29,17 @@ public class SerialAction implements IAction {
     }
 
     @Override
-    public void start(){
+    public void start() {
         actionIndex = 0;
         actions[actionIndex].start();
         isFinished = false;
     }
 
     /**
-     * updates all of the values along with the position of the servo
+     * Updates all of the values along with the position of the servo
      */
     @Override
-    public void update(){
+    public void update() {
         if (actions[actionIndex].isFinished()) {
             actionIndex++;
             if (actionIndex >= actions.length) {
@@ -53,6 +54,7 @@ public class SerialAction implements IAction {
 
     /**
      * Returns if the servo has reached its final position
+     *
      * @return true if finished, false if not finished
      */
     @Override

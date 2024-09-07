@@ -3,11 +3,10 @@ package team.techtigers.base;
 import com.arcrobotics.ftclib.command.CommandOpMode;
 import com.arcrobotics.ftclib.command.Subsystem;
 
-import team.techtigers.base.statemachine.CloseableSubsytem;
-
 
 /**
- * A CommandOpMode that allows for custom telemetry and more features
+ * A CommandOpMode from FTCLib that allows for custom telemetry and more
+ * features
  */
 public abstract class BaseOpMode extends CommandOpMode {
     private CloseableSubsytem[] subsystems;
