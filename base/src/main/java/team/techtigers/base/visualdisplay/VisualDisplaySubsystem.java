@@ -3,7 +3,7 @@ package team.techtigers.base.visualdisplay;
 
 import java.util.HashMap;
 
-import team.techtigers.base.CloseableSubsytem;
+import team.techtigers.base.CloseableSubsystem;
 import team.techtigers.core.display.Color;
 import team.techtigers.core.display.DisplayRegion;
 import team.techtigers.core.display.DisplayView;
@@ -11,7 +11,7 @@ import team.techtigers.core.display.DisplayView;
 /**
  * Output subsystem that controls the visual feedback display
  */
-public class VisualDisplaySubsystem extends CloseableSubsytem {
+public class VisualDisplaySubsystem extends CloseableSubsystem {
     private final AdafruitNeoPixel visualDisplay;
     final HashMap<String, DisplayView> views;
     DisplayView activeView;
@@ -56,15 +56,7 @@ public class VisualDisplaySubsystem extends CloseableSubsytem {
      * @return the index of the LED in the array
      */
     protected int findLedArrayIndex(int ledX, int ledY) {
-        if (ledX < 8) {
-            ledX = 7 - ledX;
-        } else if (ledX > 39) {
-            ledX = ledX - 40;
-            ledX = 7 - ledX;
-            ledX = ledX + 40;
-        } else {
-            ledY = 7 - ledY;
-        }
+        ledY = 7 - ledY;
 
         if (ledX % 2 == 0) {
             return ledX * 8 + ledY;

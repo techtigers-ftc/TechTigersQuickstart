@@ -9,7 +9,24 @@ import com.arcrobotics.ftclib.command.Subsystem;
  * features
  */
 public abstract class BaseOpMode extends CommandOpMode {
-    private CloseableSubsytem[] subsystems;
+    private CloseableSubsystem[] subsystems;
+    private boolean enableUpdate = true;
+
+    /**
+     * Disables the running of the update method. This is useful if you want to
+     * stop running telemetry in an opmode
+     */
+    protected void disableUpdate() {
+        enableUpdate = false;
+    }
+
+    /**
+     * Enable the running of the update method. This is useful if you want to
+     * continue running telemetry in an opmode after stopping it
+     */
+    protected void enableUpdate() {
+        enableUpdate = true;
+    }
 
     /**
      * Method run during the loop. Needed methods and telemetry should be placed here.
@@ -37,7 +54,7 @@ public abstract class BaseOpMode extends CommandOpMode {
      *
      * @param subsystems The subsystems to register
      */
-    protected void registerSubsystems(CloseableSubsytem... subsystems) {
+    protected void registerSubsystems(CloseableSubsystem... subsystems) {
         this.subsystems = subsystems;
         super.register(subsystems);
     }
@@ -49,12 +66,12 @@ public abstract class BaseOpMode extends CommandOpMode {
 
     @Override
     public void runOpMode() {
-        subsystems = new CloseableSubsytem[0];
+        subsystems = new CloseableSubsystem[0];
 
         try {
             initialize();
             waitForStart();
-            for (CloseableSubsytem subsystem : subsystems) {
+            for (CloseableSubsystem subsystem : subsystems) {
                 subsystem.init();
             }
             justAfterStart();
@@ -62,13 +79,15 @@ public abstract class BaseOpMode extends CommandOpMode {
             // run the scheduler
             while (!isStopRequested() && opModeIsActive()) {
                 run();
-                update();
-                telemetry.update();
+                if (enableUpdate) {
+                    update();
+                    telemetry.update();
+                }
             }
         } finally {
             reset();
             // Cleaning up after execution, whether or not there are no errors
-            for (CloseableSubsytem subsystem : subsystems) {
+            for (CloseableSubsystem subsystem : subsystems) {
                 subsystem.close();
             }
             end();
