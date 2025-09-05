@@ -3,24 +3,27 @@ package org.firstinspires.ftc.teamcode.actions;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import team.techtigers.base.BaseOpMode;
-import team.techtigers.base.actions.ActionRunnerCommand;
+import team.techtigers.base.actions.ServoActionCommand;
 
 /**
  * Test op mode for the actions
  */
 @TeleOp
 public class ActionTestOpMode extends BaseOpMode {
-    ActionRunnerCommand actionRunnerCommand;
+    ServoActionCommand actionRunnerCommand;
 
     @Override
     public void initialize() {
         ServoSubsystem servoSubsystem = new ServoSubsystem(
-                hardwareMap.servo.get("servo1"), hardwareMap.servo.get("servo2")
+                hardwareMap.servo.get("servo")
         );
 
         actionRunnerCommand =
-                new ActionRunnerCommand(servoSubsystem.getServoAction(),
-                        servoSubsystem);
+                new ServoPitchAction(
+                        servoSubsystem,
+                        () -> 50,
+                        500
+                );
 
         registerSubsystems(servoSubsystem);
     }

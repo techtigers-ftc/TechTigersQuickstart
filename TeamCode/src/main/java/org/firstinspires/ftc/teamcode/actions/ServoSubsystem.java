@@ -9,39 +9,22 @@ import team.techtigers.base.CloseableSubsystem;
  */
 public class ServoSubsystem extends CloseableSubsystem {
     private final Servo servo1;
-    private final Servo servo2;
-
     /**
      * Initializes a new ServoSubsystem
      *
      * @param servo1 The first servo
-     * @param servo2 The second servo
      */
-    public ServoSubsystem(Servo servo1, Servo servo2) {
+    public ServoSubsystem(Servo servo1) {
         this.servo1 = servo1;
-        this.servo2 = servo2;
 
         servo1.setPosition(0);
-        servo2.setPosition(0);
     }
 
-    /**
-     * @return an action that runs the servos
-     */
-    public IAction getServoAction() {
-        return new ParallelAction(
-                new SerialAction(
-                        // Waits 1 second
-                        new WaitAction(1000),
-                        // Moves servo1 to position 1 in 1 second
-                        new ServoAction(servo1, 1, 5000)
-                ),
-                new SerialAction(
-                        // Waits until servo1 is past position 0.5
-                        new WaitUntilAction(() -> servo1.getPosition() > 0.5),
-                        // Moves servo2 to position 1 in 1 second
-                        new ServoAction(servo2, 1, 1000)
-                )
-        );
+    public double getServoPosition() {
+        return servo1.getPosition();
+    }
+
+    public void setServoPosition(double position) {
+        servo1.setPosition(position);
     }
 }
