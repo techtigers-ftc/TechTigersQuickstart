@@ -1,11 +1,12 @@
 package org.firstinspires.ftc.teamcode.statemachine;
 
+import team.techtigers.base.statemachine.SequentialCommandGroupState;
 import team.techtigers.base.statemachine.State;
 
 /**
  * Test state for the state machine
  */
-public class StateTwo extends State<Condition> {
+public class StateTwo extends SequentialCommandGroupState<Condition> {
     /**
      * Constructs a new state
      *
