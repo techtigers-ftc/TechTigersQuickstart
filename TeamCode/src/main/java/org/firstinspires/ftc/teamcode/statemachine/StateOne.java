@@ -2,12 +2,13 @@ package org.firstinspires.ftc.teamcode.statemachine;
 
 import com.qualcomm.robotcore.util.ElapsedTime;
 
+import team.techtigers.base.statemachine.SequentialCommandGroupState;
 import team.techtigers.base.statemachine.State;
 
 /**
  * Test state for the state machine
  */
-public class StateOne extends State<Condition> {
+public class StateOne extends SequentialCommandGroupState<Condition> {
     private final ElapsedTime timer;
 
     /**

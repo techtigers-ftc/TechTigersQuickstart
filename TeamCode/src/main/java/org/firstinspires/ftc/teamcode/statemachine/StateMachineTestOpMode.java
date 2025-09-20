@@ -22,11 +22,8 @@ public class StateMachineTestOpMode extends BaseOpMode {
         stateMachine
                 .addState(stateOne)
                 .addState(stateTwo)
-                .from("stateOne")
-                .to("stateTwo")
-                .when(Condition.ENDED)
-                .setFirstState("stateOne");
-
+                .addTransition(stateOne, stateTwo, Condition.ENDED)
+                .setCurrentState(stateOne);
     }
 
     @Override
